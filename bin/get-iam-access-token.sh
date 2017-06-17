@@ -22,7 +22,7 @@ result=$(curl -s -L \
   -d grant_type=password \
   -d username=${IAM_USER} \
   -d password=${IAM_PASSWORD} \
-  -d scope="openid profile email" \
+  -d scope="openid profile email offline_access" \
   ${IAM_TOKEN_ENDPOINT})
 
 if [[ $? != 0 ]]; then
